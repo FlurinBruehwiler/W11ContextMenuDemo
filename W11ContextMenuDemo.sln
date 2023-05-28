@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49D9D73C-85D3-4EE8-901F-5FEC9C17D7EE}"
 	ProjectSection(SolutionItems) = preProject
 		ContextMenuRegistrationPkg\AppxManifest.xml = ContextMenuRegistrationPkg\AppxManifest.xml
+		createMSIX.ps1 = createMSIX.ps1
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ContextMenuImplementation", "ContextMenuImplementation\ContextMenuImplementation.vcxproj", "{16746B0C-5840-4ED4-AEDF-1ABB617827FD}"
