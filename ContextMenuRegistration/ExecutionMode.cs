@@ -15,44 +15,24 @@ namespace ContextMenuRegistration
 
         internal static bool IsRunningWithIdentity()
         {
-            if (isWindows7OrLower())
+            if (IsWindows7OrLower())
             {
                 return false;
             }
-            else
-            {
-                StringBuilder sb = new StringBuilder(1024);
-                int length = 0;
-                int result = GetCurrentPackageFullName(ref length, ref sb);
 
-                return result != 15700;
-            }
+            var sb = new StringBuilder(1024);
+            var length = 0;
+            var result = GetCurrentPackageFullName(ref length, ref sb);
+
+            return result != 15700;
         }
 
-        private static bool isWindows7OrLower()
+        private static bool IsWindows7OrLower()
         {
-            int versionMajor = Environment.OSVersion.Version.Major;
-            int versionMinor = Environment.OSVersion.Version.Minor;
-            double version = versionMajor + (double)versionMinor / 10;
+            var versionMajor = Environment.OSVersion.Version.Major;
+            var versionMinor = Environment.OSVersion.Version.Minor;
+            var version = versionMajor + (double)versionMinor / 10;
             return version <= 6.1;
         }
-
-
-        internal static string GetSafeAppxLocalFolder()
-        {
-            try
-            {
-               // return Windows.Storage.ApplicationData.Current.LocalFolder.Path;
-            }
-            catch (Exception ioe)
-            {
-
-                System.Diagnostics.Debug.WriteLine(ioe.Message);
-            }
-
-
-            return null;
-        }
-
     }
 }

@@ -7,7 +7,7 @@ namespace ContextMenuConsoleApp
     {
         static void Main(string[] args)
         {
-            StartUp.Main(args);
+            Registrer.InstallPackage();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
