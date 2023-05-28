@@ -1,5 +1,4 @@
-﻿using System;
-using ContextMenuRegistration;
+﻿using ContextMenuRegistration;
 
 namespace ContextMenuConsoleApp
 {

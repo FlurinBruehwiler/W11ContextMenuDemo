@@ -38,7 +38,7 @@ public:
     IFACEMETHODIMP GetTitle(_In_opt_ IShellItemArray* items, _Outptr_result_nullonfailure_ PWSTR* name)
     {
         *name = nullptr;
-        auto title = wil::make_cotaskmem_string_nothrow(L"Edit in Notepad 3");
+        auto title = wil::make_cotaskmem_string_nothrow(L"Edit in Notepad 6");
         RETURN_IF_NULL_ALLOC(title);
         *name = title.release();
         return S_OK;
